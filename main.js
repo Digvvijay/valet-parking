@@ -12,20 +12,20 @@ car_image = "car2.png";
 
 function add() {
 	bg=new Image();
-    bg.onload=uploadbackground;
+    bg.onload=upload_background;
     bg.src=background_image;
 
     c=new Image();
-    c.onload=uploadgreencar;
+    c.onload=upload_car;
     c.src=car_image;
 }
-function uploadbackground() {
+function upload_background() {
     ctx.drawImage(bg,0,0,cv.width,cv.height);
 
 }
 
-function uploadgreencar() {
-    ctx.drawImage(car_x,car_y,car_width,car_height);
+function upload_car() {
+    ctx.drawImage(c,car_x,car_y,car_width,car_height);
 }
 
 
@@ -62,7 +62,7 @@ function my_keydown(e)
 		
 }
 
-function Up()
+function up()
 {
     if (car_y>=0)
     {
@@ -75,7 +75,7 @@ function Up()
     }
 }
 
-function Down()
+function down()
 {
     if(car_y<=500)
     {
@@ -88,7 +88,7 @@ function Down()
     }
 }
 
-function Left()
+function left()
 {
     if(car_x>=0)
     {
@@ -100,7 +100,7 @@ function Left()
     }
 }
 
-function Right()
+function right()
 {
     if(car_x<=700)
     {
